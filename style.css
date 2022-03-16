@@ -1,0 +1,527 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255,0.7);
+    text-decoration: none;
+}
+/**BARRA LATERAL INICIO*/
+aside{
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #210e24;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+aside header{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    height: 40px;
+    margin-right: 10px;
+}
+aside header h1{
+    font-size: 2em;
+}
+aside .item .dashboard{
+    background-color: #6647ff;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+aside .item .dashboard i{
+    margin-right: 8px;
+}
+aside .item{
+    padding: 20px 0;
+}
+aside .item-item{
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 18px 0;
+}
+aside .item-item i{
+    margin-right: 10px;
+}
+aside .item-it{
+    padding: 0 10px;
+    margin: 15px 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+aside .logo1{
+    height: 30px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+aside .item-it > span{
+    color:rgba(255, 255, 255,0.5)
+}
+
+aside .item:nth-last-child(1){
+    display: flex;
+    align-items: center;
+}
+aside .item:nth-last-child(1) h4{
+    font-size: 0.9em;
+    font-weight: bold;
+    color:rgb(255, 255, 255)
+}
+aside .item:nth-last-child(1) span{
+    font-size: 0.8em;
+}
+aside .item p{
+    color: rgba(255,255,255,0.6)
+}
+
+aside .border{
+    border-top: 2px solid rgba(255,255,255,0.3);
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+/**BARRA LATERAL FIM*/
+
+
+/**MAIN INICIO*/
+main{
+    position: relative;
+    left: 250px;
+    width: calc(100% - 250px);
+    background-color: #efedfc;
+    padding: 10px 30px;
+}
+main .topo{
+    background-color: #210e24;
+    padding: 10px 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    height: 60px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .topo .lado1{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+main .topo .lado1 h2{
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.2em;
+}
+main .topo img{
+    height: 70px;
+    vertical-align: middle;
+}
+main .topo .lado2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .topo .lado2 h2{
+    color: #fff;
+    font-size: 1.2em;
+}
+main .topo .lado2 p{
+    font-size: 0.8em;
+}
+main .topo .lado2 img{
+    height: 100px;
+}
+main .container{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 298.8px;
+    grid-template-areas:
+    "a b info" 
+    "srch srch info" 
+    "d d info" ;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+}
+.container .item{
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0,0.2);
+    background-color: #fff;
+    border-radius: 7px;
+}
+.container .item.a{
+    grid-area: a;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.container .item.a .contain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.container .item.a::after{
+    content: "";
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color:rgba(102, 71, 255,0.3);
+    position: absolute;
+    top: -30%;
+    right: 0;
+}
+.container .item.a img{
+    height: 100px;
+    position: absolute;
+    top: -15%;
+    transform: rotate(25deg);
+    right: -5%;
+    z-index: 10;
+}
+.container .item.a .titulo{
+    margin-bottom: 15px;
+}
+.container .item.a h2{
+    color: rgb(102, 71, 255,0.9);
+    font-weight: 550;
+    font-size: 1.2em;
+}
+.container .item.a span{
+    color: rgba(0, 0, 0,0.8);
+}
+.item.a p{
+    color: rgba(0,0,0,0.8);
+    font-size: 1em;
+}
+.container .item.a .numero span:nth-child(1){
+    color: rgba(0, 0, 0,0.8);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.container .porcentagem{
+    width: 100%;
+    height: 13px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    margin-top: 5px;
+    position: relative;
+}
+.container .porcentagem .dados{
+    width: 67%;
+    background-color: #210e24;
+    position: absolute;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.container .item.b{
+    grid-area: b;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    color: #000;
+    overflow: hidden;
+    position: relative;
+    background-color: #210e24;
+    padding: 13px;
+}
+.container .item.b .img{
+    position: relative;
+}
+.container .item.b .img::after{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 40px;
+    transform: rotate(-45deg);
+    background-color: rgb(255, 255, 255);
+    left: -200px;
+}
+.container .item.b .img::before{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 40px;
+    transform: rotate(-45deg);
+    background-color: #ffffff;
+    left: -270px;
+}
+.container .item.b img{
+    position: relative;
+    width: 9.25em;
+    max-width: 148px;
+    z-index: 1;
+}
+.container .item.b .conteudo{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 3;
+}
+.container .item.b .conteudo .info{
+    margin-right: 25px;
+}
+.container .item.b .conteudo .info span{
+    font-size: 0.8em;
+}
+.container .item.b .conteudo .nome{
+    display: flex;
+    justify-content: space-between;
+}
+.container .item.b .conteudo .nome .info span:nth-child(1){
+    color: rgb(175, 158, 253);
+    font-size: 0.8em;
+}
+.container .item.b .conteudo .nome .info span:nth-child(2){
+    color: rgba(255,255,255,0.4);
+}
+
+.container .item.b .conteudo .nome .info h4{
+    color: #fff;
+    font-size: 1.7rem;
+}
+.item.b .dados{
+    display: flex;
+}
+.dados .info{
+    margin-right: 15px;
+    line-height: 18px;
+}
+.dados .info p{
+    font-size: 1.5em;
+    color: #fff;
+    margin: 0;
+}
+.dados .info span{
+    font-size: 0.8em;
+}
+.icones i{
+    display: block;
+    margin-bottom: 8px;
+    color: #6647ff;
+}
+.container .item.srch{
+    grid-area: srch;
+    color: #000;
+    padding: 0;
+    border-radius: 20px;
+    background-color: #210e24;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    height: 35px;
+}
+
+.container .item.srch input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #210e24;
+}
+.container .item.srch .fa-magnifying-glass{
+    background-color: #210e24;
+    border: none;
+    font-size: 1.12em;
+}
+.container .item.d{
+    grid-area: d;
+    color: #000;
+}
+.container .item.d .titulo{
+    text-align: center;
+}
+.container .item.d .titulo span{
+    color: #6647ff;
+    text-align: left!important;
+}
+.container .item.d .titulo h2{
+    color: rgba(0,0,0,0.7)
+}
+.container .item.d .item img{
+    display: block;
+    margin-right: 20px;
+}
+.container .item.d .pokemons{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px;
+}
+.container .item.d .pokemons .itens{
+    text-align: center;
+}
+.container .item.d .pokemons .itens h6{
+    color: rgba(0, 0, 0,0.8);
+    margin-top: 10px;
+    font-size: 1.3em;
+}
+.container .item.d .pokemons .itens span{
+    color: #000;
+}
+.container .item.d .pokemons img{
+    height: 180px;
+    z-index: 1;
+}
+.container .item.d .pokemons .imagem{
+    height: 170px;
+    width: 170px;
+    position: relative;
+    background-color: rgba(195, 219, 255, 0.384);
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-right: 20px;
+}
+
+.container .item.info{
+    grid-area: info;
+    background-color: #210e24;
+    position: relative;
+}
+.container .item.info .detalhes{
+    text-align: center;
+}
+.container .item.info span{
+    color:rgb(175, 158, 253);
+}
+.container .item.info h2{
+    color: rgb(255, 255, 255);
+    font-size: 2.2em;
+    text-transform: capitalize;
+}
+.habilidades{
+    text-align: center;
+}
+.habilidades h3{
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+}
+
+.container .item.info .imagem{
+    text-align: center;
+
+}
+
+.habilidades p{
+    margin-top: 10px;
+}
+.content{
+
+    text-align: center;
+}
+/**MAIN FIM*/
+    
+
+
+
+@media only screen and (max-width: 1162px) {
+    .container .item.b .conteudo{
+        
+    }
+}
+@media only screen and (max-width: 1164px) {
+    html{
+        font-size: 96%;
+    }
+}
+@media only screen and (max-width: 1130px) {
+    html{
+        font-size: 93%;
+    }
+}
+@media only screen and (max-width: 1156px) {
+    aside{
+        left: -110%;
+    }
+    main{
+        left: 0;
+        width: 100%;
+    }
+    main .container{
+        grid-template-columns: 1fr 1.5fr 350.8px;
+    }
+}
+@media only screen and (max-width: 950px) {
+    main .container{
+        grid-template-columns: 1fr 1.5fr 300.8px;
+    }
+    main{
+        padding: 8px 24px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container .item.b img{
+        width: 8.25em;
+    }
+    .container .item.b .img::before{
+        height: 30px;
+    }
+    .container .item.b .img::after{
+        height: 30px;
+        left: -215px;
+    }
+    main{
+        padding: 7px 21px;
+    }
+}
+
+@media only screen and (max-width: 864px){
+    main .container{
+        grid-template-areas:
+        "a a  b b b" 
+        "srch srch srch srch srch"
+        "info info info info info" 
+        "d d d d d" ;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+}
+
+@media only screen and (max-width: 560px) {
+    main .container{
+        grid-template-areas:
+        "a a a"
+        "b b b"
+        "srch srch srch"
+        "info info info" 
+        "d d d " ;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    main{
+        padding: 5px 15px;
+    }
+    main .container{
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 1131px) {
+    .item.a p{
+        font-size: 0.9em;
+    }
+}
+@media only screen and (max-width: 1092px) {
+    .item.a p{
+        font-size: 0.8em;
+    }
+}
