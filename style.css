@@ -418,7 +418,6 @@ main .container{
 
 .container .item.info .imagem{
     text-align: center;
-
 }
 
 .habilidades p{
@@ -431,13 +430,6 @@ main .container{
 /**MAIN FIM*/
     
 
-
-
-@media only screen and (max-width: 1162px) {
-    .container .item.b .conteudo{
-        
-    }
-}
 @media only screen and (max-width: 1164px) {
     html{
         font-size: 96%;
